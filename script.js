@@ -10,16 +10,79 @@ main.onclick = () => nav.classList.remove('js-nav--on');
 
 // MAIN MIDDLE
 
-const statusBtn = document.querySelectorAll('.js-status__button');
+const statusBtn1 = document.querySelector('.js-button-1'),
+        statusBtn2 = document.querySelector('.js-button-2'),
+        statusBtn3 = document.querySelector('.js-button-3'),
+        statusBtn4 = document.querySelector('.js-button-4');
 
-statusBtn.forEach((statusBtn) => statusBtn.onclick = () => statusBtn.classList.add('js-status__button--active'));
+statusBtn1.onclick = () => {
+        statusBtn1.classList.add('js-button--active');
+        statusBtn2.classList.remove('js-button--active');
+        statusBtn3.classList.remove('js-button--active');
+        statusBtn4.classList.remove('js-button--active');
+};
+statusBtn2.onclick = () => {
+        statusBtn2.classList.add('js-button--active');
+        statusBtn1.classList.remove('js-button--active');
+        statusBtn3.classList.remove('js-button--active');
+        statusBtn4.classList.remove('js-button--active');
+};
+statusBtn3.onclick = () => {
+        statusBtn3.classList.add('js-button--active');
+        statusBtn1.classList.remove('js-button--active');
+        statusBtn2.classList.remove('js-button--active');
+        statusBtn4.classList.remove('js-button--active');
+};
+statusBtn4.onclick = () => {
+        statusBtn4.classList.add('js-button--active');
+        statusBtn1.classList.remove('js-button--active');
+        statusBtn2.classList.remove('js-button--active');
+        statusBtn3.classList.remove('js-button--active');
+};
 
 // 2-2-4 MIDDLE GRADE
 
-const grade = document.querySelectorAll('.grade--active');
+const grade1 = document.querySelector('.js-grade-1'),
+        grade2 = document.querySelector('.js-grade-2'),
+        grade3 = document.querySelector('.js-grade-3'),
+        grade4 = document.querySelector('.js-grade-4'),
+        grade5 = document.querySelector('.js-grade-5');
 
-grade.forEach((grade) => grade.onclick = () => grade.classList.add('grade--active--on'));
-
+grade1.onclick = () => {
+        grade1.classList.add('js-grade--on');
+        grade2.classList.remove('js-grade--on');
+        grade3.classList.remove('js-grade--on');
+        grade4.classList.remove('js-grade--on');
+        grade5.classList.remove('js-grade--on');
+};
+grade2.onclick = () => {
+        grade2.classList.add('js-grade--on');
+        grade1.classList.remove('js-grade--on');
+        grade3.classList.remove('js-grade--on');
+        grade4.classList.remove('js-grade--on');
+        grade5.classList.remove('js-grade--on');
+};
+grade3.onclick = () => {
+        grade3.classList.add('js-grade--on');
+        grade1.classList.remove('js-grade--on');
+        grade2.classList.remove('js-grade--on');
+        grade4.classList.remove('js-grade--on');
+        grade5.classList.remove('js-grade--on');
+};
+grade4.onclick = () => {
+        grade4.classList.add('js-grade--on');
+        grade1.classList.remove('js-grade--on');
+        grade2.classList.remove('js-grade--on');
+        grade3.classList.remove('js-grade--on');
+        grade5.classList.remove('js-grade--on');
+};
+grade5.onclick = () => {
+        grade5.classList.add('js-grade--on');
+        grade1.classList.remove('js-grade--on');
+        grade2.classList.remove('js-grade--on');
+        grade3.classList.remove('js-grade--on');
+        grade4.classList.remove('js-grade--on');
+};
 // 2-2-6 MIDDLE NOTE
 
 const textarea = document.querySelector('.js-note__textarea'),
