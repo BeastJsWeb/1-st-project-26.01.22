@@ -1,7 +1,0 @@
-/*
-let menu__buttons = document.querySelector('.menu__buttons');
-let mid = document.querySelector('.mid');*/
-
-document.querySelector('.mid').onclick^ = function() {
-	document.querySelector('.menu__buttons').classList.toggle('menu__buttons--active');
-};
