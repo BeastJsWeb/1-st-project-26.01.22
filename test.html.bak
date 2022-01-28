@@ -9,10 +9,10 @@
 	</head>
 	
 	<body>
-		<header class="header">
+		<header id="js-header" class="header">
 				<div class="header__block-1"><a href="#">my<img src="image/icon1.png">shows</a></div>
 				<img id="js-nav--off" src="image/icon1_2.png">
-				<nav class="js-nav">
+				<nav id="js-nav">
 					<div><a href="#"><img src="image/icon5.png">Мои сериалы</a>
 						<a href="#"><img src="image/icon6.png">Профиль</a>
 						<a href="#"><img src="image/icon7.png">Календарь</a>
@@ -34,35 +34,36 @@
 				</div>
 		</header>
 		
-		<main class="main" id="main">
+		<main class="main" id="js-main">
 		
-			<div class="main__aside">
-				<a href=""><img src="image/icon5.png"><p>Мои сериалы</p></a>
-				<a href=""><img src="image/icon6.png"><p>Профиль</p></a>
-				<a href=""><img src="image/icon7.png"><p>Календарь</p></a>
-				<a href=""><img src="image/icon8.png"><p>Друзья</p></a>
-				<a href=""><img src="image/icon9.png"><p>Избранное</p></a>
-				<a href=""><img src="image/icon10.png"><p>Рекомендации</p></a>
+			<div id="js-main__aside" class="main__aside">
+				<a href="#"><img src="image/icon5.png"><p>Мои сериалы</p></a>
+				<a href="#"><img src="image/icon6.png"><p>Профиль</p></a>
+				<a href="#"><img src="image/icon7.png"><p>Календарь</p></a>
+				<a href="#"><img src="image/icon8.png"><p>Друзья</p></a>
+				<a href="#"><img src="image/icon9.png"><p>Избранное</p></a>
+				<a href="#"><img src="image/icon10.png"><p>Рекомендации</p></a>
+				<a id="js-theme" href="#"><img src="image/icon24.ico"><p>Тема</p></a>
 			</div>
 			
-			<div class="main__middle">
+			<div id="js-main__middle" class="main__middle">
 				<div class="middle__navigation"><a href="#">Главная</a><a href="#">Сериалы</a></div>
 				<div class="middle__title"><div>Белый воротничек<img src="image/icon8.png"></div><div class="title__english">White Collar</div></div>
 				<img src="image/pic2.jpg">
 				<div class="middle__status">
-					<div class="js-button-1">Смотрю</div>
-					<div class="js-button-2">Буду</div>
-					<div class="js-button-3">Перестал</div>
-					<div class="js-button-4">Не смотрю</div>
+					<div id="js-button-1" class="js-button-1">Смотрю</div>
+					<div id="js-button-2" class="js-button-2">Буду</div>
+					<div id="js-button-3" class="js-button-3">Перестал</div>
+					<div id="js-button-4" class="js-button-4">Не смотрю</div>
 				</div>
 				
 				<div class="middle__grade">
 					<div><span class="grade__title--weight">Моя оценка</span>
-						<div class="js-grade-5"><img src="image/icon9_2.png"><img src="image/icon9_2.png"><img src="image/icon9_2.png"><img src="image/icon9_2.png"><img src="image/icon9_2.png"></div>
-						<div class="js-grade-4"><img src="image/icon9_2.png"><img src="image/icon9_2.png"><img src="image/icon9_2.png"><img src="image/icon9_2.png"></div>
-						<div class="js-grade-3"><img src="image/icon9_2.png"><img src="image/icon9_2.png"><img src="image/icon9_2.png"></div>
-						<div class="js-grade-2"><img src="image/icon9_2.png"><img src="image/icon9_2.png"></div>
-						<div class="js-grade-1"><img src="image/icon9_2.png"></div>
+						<div class="js-grade-5"><img src="image/icon9.png"><img src="image/icon9.png"><img src="image/icon9.png"><img src="image/icon9.png"><img src="image/icon9.png"></div>
+						<div class="js-grade-4"><img src="image/icon9.png"><img src="image/icon9.png"><img src="image/icon9.png"><img src="image/icon9.png"></div>
+						<div class="js-grade-3"><img src="image/icon9.png"><img src="image/icon9.png"><img src="image/icon9.png"></div>
+						<div class="js-grade-2"><img src="image/icon9.png"><img src="image/icon9.png"></div>
+						<div class="js-grade-1"><img src="image/icon9.png"></div>
 					</div>	
 					<div class="grade__number--font">4.35<font>MyShows<sup>41 726</sup></font></div>
 				</div>
@@ -110,8 +111,8 @@
 				</div>
 				
 				<div class="middle__note">
-					<div class="js-note"><img src="image/icon22.png"><span>Написать заметку</span></div>
-					<div class="js-note__textarea"><textarea></textarea><div><button class="js-textarea__button">Сохранить</button><button class="js-textarea__button">Отмена</button></div></div>
+					<a class="js-note"><img src="image/icon22.png">Написать заметку</a>
+					<div id="js-note__textarea" class="js-note__textarea"><textarea></textarea><div><button class="js-textarea__button">Сохранить</button><button class="js-textarea__button">Отмена</button></div></div>
 				</div>
 				
 				<div class="js-description__list js-description__list--on">
@@ -139,7 +140,7 @@
 				
 			</div>
 			
-			<div class="main__aside-2">
+			<div id="js-main__aside-2" class="main__aside-2">
 				<ul>
 					<li><h4>Рейтинг серий</h4></li>
 					<li><img src="image/icon23.png"><a href="#">s06e06</a>- 4.788<sup>2 438</sup></li>

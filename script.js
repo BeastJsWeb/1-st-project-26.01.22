@@ -4,17 +4,17 @@
 
 const nav = document.getElementById('js-nav');
 const navOff = document.getElementById('js-nav--off');
-const main = document.getElementById('main');
+const main = document.getElementById('js-main');
 
 navOff.onclick = () => nav.classList.toggle('js-nav--on');
 main.onclick = () => nav.classList.remove('js-nav--on');
 
 // MAIN MIDDLE
 
-const statusBtn1 = document.querySelector('.js-button-1'),
-  statusBtn2 = document.querySelector('.js-button-2'),
-  statusBtn3 = document.querySelector('.js-button-3'),
-  statusBtn4 = document.querySelector('.js-button-4');
+const statusBtn1 = document.getElementById('js-button-1');
+const statusBtn2 = document.getElementById('js-button-2');
+const statusBtn3 = document.getElementById('js-button-3');
+const statusBtn4 = document.getElementById('js-button-4');
 
 statusBtn1.onclick = () => {
   statusBtn1.classList.add('js-button--active');
@@ -86,12 +86,14 @@ grade5.onclick = () => {
 };
 // 2-2-6 MIDDLE NOTE
 
-const textarea = document.querySelector('.js-note__textarea'),
+const textarea = document.getElementById('js-note__textarea'),
   note = document.querySelector('.js-note'),
   areaBtn = document.querySelectorAll('.js-textarea__button');
 
 note.onclick = () => textarea.classList.add('js-note__textarea--on');
-areaBtn.forEach((areaBtn) => areaBtn.onclick = () => textarea.classList.remove('js-note__textarea--on'));
+areaBtn.forEach((areaBtn) => areaBtn.onclick = () => {
+  textarea.classList.remove('js-note__textarea--on');
+});
 
 // 2-2-7 MIDDLE DESCRIPTION + ACTORS
 
@@ -108,3 +110,25 @@ actorsBtn.onclick = () => {
   actorsList.classList.add('js-actors__list--on');
    descrList.classList.remove('js-description__list--on');
 };
+
+//--4-0 (2-1-1) THEME BLACK--------------------
+
+const theme = document.getElementById('js-theme');
+const header = document.getElementById('js-header');
+const aside1 = document.getElementById('js-main__aside');
+const middle = document.getElementById('js-main__middle');
+const aside2 = document.getElementById('js-main__aside-2');
+
+
+theme.onclick = () => {
+  main.classList.toggle('js-main--black');
+  header.classList.toggle('js-header--black');
+  aside1.classList.toggle('js-main__aside--black');
+  middle.classList.toggle('js-main__middle--black');
+  aside2.classList.toggle('js-main__aside-2--black');
+  statusBtn1.classList.toggle('js-buttons--black');
+  statusBtn2.classList.toggle('js-buttons--black');
+  statusBtn3.classList.toggle('js-buttons--black');
+  statusBtn4.classList.toggle('js-buttons--black');
+  textarea.classList.toggle('js-note__textarea--black');
+  };
