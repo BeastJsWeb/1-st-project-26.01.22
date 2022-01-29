@@ -304,7 +304,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 	transition: all 0.3s;
 	color: black;
 	text-decoration: none;
-	filter: invert(0%);
 }	
 
 .main__aside a:hover {
@@ -312,12 +311,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 	opacity: 1;
 	border-bottom: 1px solid #CCCCCC;
 	padding: 25px 5px 5px 5px;
-	filter: sepia(40%);
+	filter: brightness(-50%);
 }
 
 .main__aside img {
 	width: 30px;
 	transition: all 0.6s;
+	filter: contrast(0%);
 }	
 
 .main__aside img:hover {
@@ -334,6 +334,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 	color: #F0FFFF;
 	opacity: 0.7;
 }	
+
+.js-main__aside--black img {
+	filter: contrast(100%);
+}
+
+.js-main__aside--black a:hover {
+	filter: sepia(50%);
+}
 
 /*2-2--MAIN MIDDLE-------------------------------------*/
 
@@ -500,6 +508,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	/*filter: grayscale(1);*/
 	transition: all 0.3s;
 	opacity: 0.0;
+	
 }
 
 .js-grade-5 {
@@ -509,20 +518,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	padding-left: 100px;
 	/*filter: grayscale(1);*/
 	transition: all 0.3s;
-	filter: invert(0%);
+	filter: contrast(0%);
 }
 
 .js-grade-1:hover, .js-grade-2:hover, .js-grade-3:hover, .js-grade-4:hover, .js-grade-5:hover {
 	/*filter: grayscale(0);*/
 	opacity: 1;
 	cursor: pointer;
-	filter: sepia(60%);
+	filter: contrast(100%);
 }
 
 .js-grade--on {
 	/*filter: grayscale(0);*/
 	opacity: 1;
-	filter: sepia(60%);
+	filter: brightness(50%);
 }
 
 .middle__grade img {
@@ -555,6 +564,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 .js-main__middle--black .middle__grade {
 	border-bottom: 1px solid #565456;
+}
+
+.js-main__middle--black .js-grade-1, .js-main__middle--black .js-grade-2, .js-main__middle--black .js-grade-3, .js-main__middle--black .js-grade-4, .js-main__middle--black .js-grade-5 {
+	filter: brightness(120%);
+}
+
+.js-main__middle--black .js-grade-1:hover, .js-main__middle--black .js-grade-2:hover, .js-main__middle--black .js-grade-3:hover, .js-main__middle--black .js-grade-4:hover, .js-main__middle--black .js-grade-5:hover {
+	filter: sepia(30%);
+}
+
+.js-main__middle--black .js-grade--on {
+	filter: sepia(100%);
 }
 
 /*--2-2-5--MIDDLE CONTAINER 2----------------*/
@@ -776,6 +797,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	border-radius: 100%;
 	margin-right: 10px;
 	transition: all 0.5s;
+	
 }
 
 .list img:hover {
@@ -787,6 +809,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	align-items: center;
 	font-weight: 600;
 	color: black;
+	display: flex;
+	
+}
+
+@media (max-width: 550px) {
+	.list a {
+	align-items: flex-start;
+	flex-direction: column;
+}
+
 }
 
 .list a:hover {

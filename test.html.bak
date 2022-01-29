@@ -19,6 +19,7 @@
 						<a href="#"><img src="image/icon8.png">Друзья</a>
 						<a href="#"><img src="image/icon9.png">Избранное</a>
 						<a href="#"><img src="image/icon10.png">Рекомендации</a>
+						<a class="js-theme" href="#"><img src="image/icon24.png">Тема</a>
 					</div>
 				</nav>
 				<div class="header__block-2"><a class="button--hover" href="#">Сериалы</a>
@@ -43,12 +44,12 @@
 				<a href="#"><img src="image/icon8.png"><p>Друзья</p></a>
 				<a href="#"><img src="image/icon9.png"><p>Избранное</p></a>
 				<a href="#"><img src="image/icon10.png"><p>Рекомендации</p></a>
-				<a id="js-theme" href="#"><img src="image/icon24.ico"><p>Тема</p></a>
+				<a class="js-theme" href="#"><img src="image/icon24.png"><p>Тема</p></a>
 			</div>
 			
 			<div id="js-main__middle" class="main__middle">
 				<div class="middle__navigation"><a href="#">Главная</a><a href="#">Сериалы</a></div>
-				<div class="middle__title"><div>Белый воротничек<img src="image/icon8.png"></div><div class="title__english">White Collar</div></div>
+				<div class="middle__title"><div>Белый воротничок<img src="image/icon8.png"></div><div class="title__english">White Collar</div></div>
 				<img src="image/pic2.jpg">
 				<div class="middle__status">
 					<div id="js-button-1" class="js-button-1">Смотрю</div>
@@ -111,11 +112,11 @@
 				</div>
 				
 				<div class="middle__note">
-					<a class="js-note"><img src="image/icon22.png">Написать заметку</a>
+					<a id="js-note" class="js-note"><img src="image/icon22.png">Написать заметку</a>
 					<div id="js-note__textarea" class="js-note__textarea"><textarea></textarea><div><button class="js-textarea__button">Сохранить</button><button class="js-textarea__button">Отмена</button></div></div>
 				</div>
 				
-				<div class="js-description__list js-description__list--on">
+				<div id="js-description__list" class="js-description__list js-description__list--on">
 					<div class="description__buttons"><big>Описание</big><big id="js-actors__button">Актеры<span>8<span></big></div>
 					<div><p>Харизматичный агент ФБР и красавец-мошенник, засаженный им в свое время в тюрьму, становятся напарниками и вместе расследуют преступления в мире большого бизнеса.</p>
 						<h4>Вчем суть?</h4>

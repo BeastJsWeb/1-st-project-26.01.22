@@ -1,4 +1,6 @@
 "use strict";
+/* jslint node: true */
+/* jshint browser: true */
 
 // HEADER
 
@@ -7,6 +9,7 @@ const navOff = document.getElementById('js-nav--off');
 const main = document.getElementById('js-main');
 
 navOff.onclick = () => nav.classList.toggle('js-nav--on');
+
 main.onclick = () => nav.classList.remove('js-nav--on');
 
 // MAIN MIDDLE
@@ -86,41 +89,42 @@ grade5.onclick = () => {
 };
 // 2-2-6 MIDDLE NOTE
 
-const textarea = document.getElementById('js-note__textarea'),
-  note = document.querySelector('.js-note'),
-  areaBtn = document.querySelectorAll('.js-textarea__button');
+const textarea = document.getElementById('js-note__textarea');
+const note = document.getElementById('js-note');
+const areaBtn = document.querySelectorAll('.js-textarea__button');
 
 note.onclick = () => textarea.classList.add('js-note__textarea--on');
+
 areaBtn.forEach((areaBtn) => areaBtn.onclick = () => {
   textarea.classList.remove('js-note__textarea--on');
 });
 
 // 2-2-7 MIDDLE DESCRIPTION + ACTORS
 
-const descrList = document.querySelector('.js-description__list'),
-  actorsList = document.querySelector('.js-actors__list'),
-  descrBtn = document.getElementById('js-description__button'),
-  actorsBtn = document.getElementById('js-actors__button');
+const descrList = document.getElementById('js-description__list');
+const actorsList = document.getElementById('js-actors__list');
+const descrBtn = document.getElementById('js-description__button');
+const actorsBtn = document.getElementById('js-actors__button');
 
 descrBtn.onclick = () => {
   descrList.classList.add('js-description__list--on');
   actorsList.classList.remove('js-actors__list--on');
-};    
+};  
 actorsBtn.onclick = () => {
   actorsList.classList.add('js-actors__list--on');
-   descrList.classList.remove('js-description__list--on');
+  descrList.classList.remove('js-description__list--on');
 };
 
 //--4-0 (2-1-1) THEME BLACK--------------------
 
-const theme = document.getElementById('js-theme');
+const theme = document.querySelectorAll('.js-theme');
 const header = document.getElementById('js-header');
 const aside1 = document.getElementById('js-main__aside');
 const middle = document.getElementById('js-main__middle');
 const aside2 = document.getElementById('js-main__aside-2');
 
 
-theme.onclick = () => {
+theme.forEach((theme) => theme.onclick = () => {
   main.classList.toggle('js-main--black');
   header.classList.toggle('js-header--black');
   aside1.classList.toggle('js-main__aside--black');
@@ -131,4 +135,4 @@ theme.onclick = () => {
   statusBtn3.classList.toggle('js-buttons--black');
   statusBtn4.classList.toggle('js-buttons--black');
   textarea.classList.toggle('js-note__textarea--black');
-  };
+});
