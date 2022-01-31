@@ -448,7 +448,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	gap: 2px;
 }
 
-#js-button-1, #js-button-2, #js-button-3, #js-button-4 {
+.js-button {
 	flex: 1;
 	padding: 5px;
 	min-width: 95px;
@@ -525,7 +525,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	/*filter: grayscale(0);*/
 	opacity: 1;
 	cursor: pointer;
-	filter: contrast(100%);
+	filter: brightness(50%);;
 }
 
 .js-grade--on {
@@ -571,7 +571,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 }
 
 .js-main__middle--black .js-grade-1:hover, .js-main__middle--black .js-grade-2:hover, .js-main__middle--black .js-grade-3:hover, .js-main__middle--black .js-grade-4:hover, .js-main__middle--black .js-grade-5:hover {
-	filter: sepia(30%);
+	filter: sepia(100%);
 }
 
 .js-main__middle--black .js-grade--on {

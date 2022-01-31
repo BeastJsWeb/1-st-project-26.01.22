@@ -14,44 +14,40 @@ main.addEventListener('click', () => nav.classList.remove('js-nav--on'));
 
 // MAIN MIDDLE
 
-const statusBtn1 = document.getElementById('js-button-1');
-const statusBtn2 = document.getElementById('js-button-2');
-const statusBtn3 = document.getElementById('js-button-3');
-const statusBtn4 = document.getElementById('js-button-4');
+const statusBtnsParent = document.getElementById('js-middle__status');
+const statusBtns = statusBtnsParent.querySelectorAll('.js-button');
 
-statusBtn1.addEventListener('click', () => {
-  statusBtn1.classList.add('js-button--active');
-  statusBtn2.classList.remove('js-button--active');
-  statusBtn3.classList.remove('js-button--active');
-  statusBtn4.classList.remove('js-button--active');
-});
-statusBtn2.addEventListener('click', () => {
-  statusBtn2.classList.add('js-button--active');
-  statusBtn1.classList.remove('js-button--active');
-  statusBtn3.classList.remove('js-button--active');
-  statusBtn4.classList.remove('js-button--active');
-});
-statusBtn3.addEventListener('click', () => {
-  statusBtn3.classList.add('js-button--active');
-  statusBtn1.classList.remove('js-button--active');
-  statusBtn2.classList.remove('js-button--active');
-  statusBtn4.classList.remove('js-button--active');
-});
-statusBtn4.addEventListener('click', () => {
-  statusBtn4.classList.add('js-button--active');
-  statusBtn1.classList.remove('js-button--active');
-  statusBtn2.classList.remove('js-button--active');
-  statusBtn3.classList.remove('js-button--active');
+function statusBtnAdd(i) {
+  statusBtns[i].classList.add('js-button--active');
+}
+
+function statusBtnsRemoveAll() {
+  statusBtns.forEach(btn => {
+    btn.classList.remove('js-button--active');
+  });
+}
+
+statusBtnsParent.addEventListener('click', (event) => {
+  const target = event.target;
+
+  if (target && target.classList.contains('js-button')) {
+    statusBtns.forEach((btn, i) => {
+      if (target == btn) {
+        statusBtnsRemoveAll();
+        statusBtnAdd(i);
+      }
+    });
+  }
 });
 
 // 2-2-4 MIDDLE GRADE
 
-const grade = document.querySelector('.middle__grade'),
-  grade1 = grade.querySelector('.js-grade-1'),
-  grade2 = grade.querySelector('.js-grade-2'),
-  grade3 = grade.querySelector('.js-grade-3'),
-  grade4 = grade.querySelector('.js-grade-4'),
-  grade5 = grade.querySelector('.js-grade-5');
+const gradeParent = document.querySelector('.middle__grade'),
+  grade1 = gradeParent.querySelector('.js-grade-1'),
+  grade2 = gradeParent.querySelector('.js-grade-2'),
+  grade3 = gradeParent.querySelector('.js-grade-3'),
+  grade4 = gradeParent.querySelector('.js-grade-4'),
+  grade5 = gradeParent.querySelector('.js-grade-5');
 
 grade1.addEventListener('click', () => {
   grade1.classList.add('js-grade--on');
@@ -97,8 +93,10 @@ const areaBtn = document.querySelectorAll('.js-textarea__button');
 
 note.addEventListener('click', () => textarea.classList.add('js-note__textarea--on'));
 
-areaBtn.forEach((areaBtn) => areaBtn.onclick = () => {
-  textarea.classList.remove('js-note__textarea--on');
+areaBtn.forEach(areaBtn => {
+  areaBtn.addEventListener('click', () => {
+    textarea.classList.remove('js-note__textarea--on');
+  });
 });
 
 // 2-2-7 MIDDLE DESCRIPTION + ACTORS
@@ -112,6 +110,7 @@ descrBtn.addEventListener('click', () => {
   descrList.classList.add('js-description__list--on');
   actorsList.classList.remove('js-actors__list--on');
 });  
+
 actorsBtn.addEventListener('click', () => {
   actorsList.classList.add('js-actors__list--on');
   descrList.classList.remove('js-description__list--on');
@@ -125,16 +124,21 @@ const aside1 = document.getElementById('js-main__aside');
 const middle = document.getElementById('js-main__middle');
 const aside2 = document.getElementById('js-main__aside-2');
 
+function statusBtnsTheme() {
+  statusBtns.forEach(btn => {
+    btn.classList.toggle('js-buttons--black');
+  });
+}
 
-theme.forEach((theme) => theme.onclick = () => {
-  main.classList.toggle('js-main--black');
-  header.classList.toggle('js-header--black');
-  aside1.classList.toggle('js-main__aside--black');
-  middle.classList.toggle('js-main__middle--black');
-  aside2.classList.toggle('js-main__aside-2--black');
-  statusBtn1.classList.toggle('js-buttons--black');
-  statusBtn2.classList.toggle('js-buttons--black');
-  statusBtn3.classList.toggle('js-buttons--black');
-  statusBtn4.classList.toggle('js-buttons--black');
-  textarea.classList.toggle('js-note__textarea--black');
+theme.forEach((theme) => {
+  theme.addEventListener('click', () => {
+    main.classList.toggle('js-main--black');
+    header.classList.toggle('js-header--black');
+    aside1.classList.toggle('js-main__aside--black');
+    middle.classList.toggle('js-main__middle--black');
+    aside2.classList.toggle('js-main__aside-2--black');
+    textarea.classList.toggle('js-note__textarea--black');
+
+    statusBtnsTheme();
+  });
 });

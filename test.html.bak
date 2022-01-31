@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<thml lang= "ru">
+<html lang="ru">
 
 	<head>
 		<meta charset="utf-8">
@@ -52,10 +52,10 @@
 				<div class="middle__title"><div>Белый воротничок<img src="image/icon8.png"></div><div class="title__english">White Collar</div></div>
 				<img src="image/pic2.jpg">
 				<div id="js-middle__status" class="middle__status">
-					<div id="js-button-1" class="">Смотрю</div>
-					<div id="js-button-2" class="">Буду</div>
-					<div id="js-button-3" class="">Перестал</div>
-					<div id="js-button-4" class="">Не смотрю</div>
+					<div id="js-button-1" class="js-button">Смотрю</div>
+					<div id="js-button-2" class="js-button">Буду</div>
+					<div id="js-button-3" class="js-button">Перестал</div>
+					<div id="js-button-4" class="js-button">Не смотрю</div>
 				</div>
 				
 				<div class="middle__grade">
@@ -107,7 +107,7 @@
 							<div><a href="#">8.083</a>из 10<sup>59 664</sup></div>
 						</li>
 						<li><div class="container-2__report--active">Нашли ошибку?<a href="#">Сообщите нам</a></div></li>
-						<li><a class="middle__kinopoisk" href=""><img class="kinopoisk__img--padding" src="image/icon20.png"> Смотреть на <span><img src="image/icon21.png"><span>ИНОПОИСК</span></span></a></li>
+						<li><a class="middle__kinopoisk" href="#"><img class="kinopoisk__img--padding" src="image/icon20.png"> Смотреть на <span><img src="image/icon21.png"><span>ИНОПОИСК</span></span></a></li>
 					</ul>
 				</div>
 				
@@ -158,30 +158,30 @@
 		<footer class="footer">
 			<div class="footer__container-1">
 				<div class="container-1--1110px">
-					<a href="" class="button--hover container-1__padding">Сериалы</a>
-					<a href="" class="button--hover container-1__padding">Новости</a>
-					<a href="" class="button--hover container-1__padding">Рейтинги</a>
-					<a href="" class="button--hover container-1__padding">Сообщество</a>
-					<a href="" class="button--hover container-1__padding">Реклама</a>
-					<a href="" class="button--hover container-1__padding">FAQ</a>
-					<a href="" class="button--hover container-1__padding">Контакты</a>
-					<a href="" class="button--hover container-1__padding">Правила использования</a>
-					<a href="" class="button--hover">Купить</a>
+					<a href="#" class="button--hover container-1__padding">Сериалы</a>
+					<a href="#" class="button--hover container-1__padding">Новости</a>
+					<a href="#" class="button--hover container-1__padding">Рейтинги</a>
+					<a href="#" class="button--hover container-1__padding">Сообщество</a>
+					<a href="#" class="button--hover container-1__padding">Реклама</a>
+					<a href="#" class="button--hover container-1__padding">FAQ</a>
+					<a href="#" class="button--hover container-1__padding">Контакты</a>
+					<a href="#" class="button--hover container-1__padding">Правила использования</a>
+					<a href="#" class="button--hover">Купить</a>
 				</div>	
 				<div class="footer__1st-line--social">
-					<a href="" class=""><img src="image/icon14.png"></a>
-					<a href="" class=""><img src="image/icon15.png"></a>
-					<a href="" class=""><img src="image/icon16.png"></a>
-					<a href="" class=""><img src="image/icon17.png"></a>
-					<a href="" class=""><img src="image/icon18.png"> 18+</a>
+					<a href="#"><img src="image/icon14.png"></a>
+					<a href="#"><img src="image/icon15.png"></a>
+					<a href="#"><img src="image/icon16.png"></a>
+					<a href="#"><img src="image/icon17.png"></a>
+					<a href="#"><img src="image/icon18.png"> 18+</a>
 				</div>	
 			</div>
 			<div class="footer__2d-line-buttons">
 				<div class="footer__wrap"><a href="#" class=""><img src="image/icon19.png">ru</a></div>
 				<div class="footer__wrap">
-					<a href="" class="button--hover"><img src="image/icon11.png">iPhone</a>
-					<a href="" class="button--hover footer__img--grayscale"><img src="image/icon12.png">Android</a>
-					<a href="" class="button--hover"><img src="image/icon13.png"> huawei</a>
+					<a href="#" class="button--hover"><img src="image/icon11.png">iPhone</a>
+					<a href="#" class="button--hover footer__img--grayscale"><img src="image/icon12.png">Android</a>
+					<a href="#" class="button--hover"><img src="image/icon13.png"> huawei</a>
 				</div>	
 			</div>
 		</footer>
