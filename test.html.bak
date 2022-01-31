@@ -51,11 +51,11 @@
 				<div class="middle__navigation"><a href="#">Главная</a><a href="#">Сериалы</a></div>
 				<div class="middle__title"><div>Белый воротничок<img src="image/icon8.png"></div><div class="title__english">White Collar</div></div>
 				<img src="image/pic2.jpg">
-				<div class="middle__status">
-					<div id="js-button-1" class="js-button-1">Смотрю</div>
-					<div id="js-button-2" class="js-button-2">Буду</div>
-					<div id="js-button-3" class="js-button-3">Перестал</div>
-					<div id="js-button-4" class="js-button-4">Не смотрю</div>
+				<div id="js-middle__status" class="middle__status">
+					<div id="js-button-1" class="">Смотрю</div>
+					<div id="js-button-2" class="">Буду</div>
+					<div id="js-button-3" class="">Перестал</div>
+					<div id="js-button-4" class="">Не смотрю</div>
 				</div>
 				
 				<div class="middle__grade">
@@ -124,7 +124,7 @@
 					</div>
 				</div>
 				
-				<div class="js-actors__list">
+				<div id="js-actors__list" class="js-actors__list">
 					<div class="description__buttons"><big id="js-description__button">Описание</big><big>Актеры<span>8<span></big></div>
 					<div class="list">
 						<div><a href="#"><img src="image/pic4.jpg"><div>Matt Bomer<sub>Neal George Caffrey</sub></div></a>

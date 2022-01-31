@@ -448,7 +448,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	gap: 2px;
 }
 
-.js-button-1, .js-button-2, .js-button-3, .js-button-4  {
+.js-button {
 	flex: 1;
 	padding: 5px;
 	min-width: 95px;
@@ -456,7 +456,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	background: #DFE7EB;
 }
 
-.js-button-1:hover, .js-button-2:hover, .js-button-3:hover, .js-button-4:hover  {
+.js-button:hover  {
 	flex: 1;
 	min-width: 95px;
 	flex-basis: 2%;
@@ -467,13 +467,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	padding: 5px;
 	min-width: 95px;
 	color: #F0FFFF;
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
-background: rgb(169,3,41); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+background: rgb(169,3,41);
+background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -webkit-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); 
+background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); 
 }
+
 
 .js-buttons--black  {
 	background-color: #656565;
