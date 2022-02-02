@@ -5,7 +5,7 @@ body {
 	background-attachment: fixed;
 	margin: 0 auto;
 	font-family: sans-serif;
-	background-image: url(image/pic1.jpg);
+	background-image: url(../images/pic1.jpg);
 	background-position: center;
 	box-shadow: inset 0px -300px 100px -100px #0D0D0D;
 }
@@ -269,7 +269,7 @@ sup {
 
 /*2-1--MAIN ASIDE----------------------------------------------------------*/
 
-.main__aside {
+.js-main__aside {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
@@ -290,12 +290,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 }
 
 @media (max-width: 775px) {
-	.main__aside {
+	.js-main__aside {
 		display: none;
 	}
 }
 
-.main__aside a {
+.js-main__aside a {
 	text-decoration: none;
 	opacity: 0.6;
 	/*filter: grayscale(1);*/
@@ -306,7 +306,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 	text-decoration: none;
 }	
 
-.main__aside a:hover {
+.js-main__aside a:hover {
 	/*filter: grayscale(0);*/
 	opacity: 1;
 	border-bottom: 1px solid #CCCCCC;
@@ -314,13 +314,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 	filter: brightness(-50%);
 }
 
-.main__aside img {
+.js-main__aside img {
 	width: 30px;
 	transition: all 0.6s;
 	filter: contrast(0%);
 }	
 
-.main__aside img:hover {
+.js-main__aside img:hover {
 	width: 40px;
 }	
 
@@ -345,7 +345,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 
 /*2-2--MAIN MIDDLE-------------------------------------*/
 
-.main__middle {
+.js-main__middle {
 	display: flex;
 	flex: 5;
 	background-color: #FFFFFF;
@@ -355,13 +355,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 	flex-direction: column;
 }
 
-.main__middle > img {
+.js-main__middle > img {
 	width: 100%;
 	padding: 0;
 	box-shadow: 0px 0px 2px 0px #0D0D0D;
 }
 
-.main__middle a {
+.js-main__middle a {
 	display: flex;
 	flex-wrap: wrap;
 	text-decoration: none;
@@ -370,7 +370,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 }
 
 
-.main__middle a:hover {
+.js-main__middle a:hover {
 	text-decoration: underline #0066CC;
 }
 
@@ -474,7 +474,6 @@ background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); 
 }
 
-
 .js-buttons--black  {
 	background-color: #656565;
 	color: #F0FFFF;
@@ -495,41 +494,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 }
 
 .middle__grade span {
-	position: absolute;
 	align-self: center;
-	z-index: 6;
 	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	z-index:1;
 }
 
-.js-grade-1, .js-grade-2, .js-grade-3, .js-grade-4 {
+.js-grade {
 	position: absolute;
 	align-self: center;
 	padding-left: 100px;
-	/*filter: grayscale(1);*/
 	transition: all 0.3s;
 	opacity: 0.0;
-	
 }
 
-.js-grade-5 {
+.middle__grade div > div:nth-child(2) {
 	opacity: 0.3;
-	position: absolute;
-	align-self: center;
-	padding-left: 100px;
-	/*filter: grayscale(1);*/
-	transition: all 0.3s;
 	filter: contrast(0%);
 }
 
-.js-grade-1:hover, .js-grade-2:hover, .js-grade-3:hover, .js-grade-4:hover, .js-grade-5:hover {
-	/*filter: grayscale(0);*/
+.js-grade:hover, .middle__grade div > div:nth-child(2):hover {
 	opacity: 1;
 	cursor: pointer;
-	filter: brightness(50%);;
+	filter: brightness(50%);
 }
 
-.js-grade--on {
-	/*filter: grayscale(0);*/
+.js-grade--on, .middle__grade div > div:nth-child(2).js-grade--on  {
 	opacity: 1;
 	filter: brightness(50%);
 }
@@ -548,11 +539,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 @media (max-width: 550px) {
 	.grade__number--font {
-		padding-bottom: 25px;
+		padding-bottom: 30px;
 	}
 	
 	.middle__grade > div > div, .middle__grade span {
-		padding-top: 25px;
+		padding-top: 30px;
 	}
 }
 
@@ -566,15 +557,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	border-bottom: 1px solid #565456;
 }
 
-.js-main__middle--black .js-grade-1, .js-main__middle--black .js-grade-2, .js-main__middle--black .js-grade-3, .js-main__middle--black .js-grade-4, .js-main__middle--black .js-grade-5 {
+.js-main__middle--black .js-grade, .js-main__middle--black .middle__grade div > div:nth-child(2) {
 	filter: brightness(120%);
 }
 
-.js-main__middle--black .js-grade-1:hover, .js-main__middle--black .js-grade-2:hover, .js-main__middle--black .js-grade-3:hover, .js-main__middle--black .js-grade-4:hover, .js-main__middle--black .js-grade-5:hover {
+.js-main__middle--black .js-grade:hover, .js-main__middle--black .middle__grade div > div:nth-child(2):hover {
 	filter: sepia(100%);
 }
 
-.js-main__middle--black .js-grade--on {
+.js-main__middle--black .js-grade--on, .js-main__middle--black .middle__grade div > div:nth-child(2).js-grade--on {
 	filter: sepia(100%);
 }
 
@@ -680,7 +671,6 @@ li .middle__kinopoisk:hover {
 
 .js-note a {
 	text-decoration: none;
-	/*color: #0066CC;*/
 	border-bottom: 1px dotted #0066CC;
 	font-size: 14px;
 	cursor: pointer;
@@ -736,11 +726,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	color: #F0FFFF;
 }
 
-/*--2-2-7--DESCRIPTION + ACTORS----------------*/
+/*--2-2-7--DESCRIPTION----------------*/
 
-.description__buttons {
+.description > div:nth-child(1) {
 	display: flex;
-	padding-top: 15px;
+	padding-top: 30px;
 	font-weight: 600;
 	font-size: 17px;
 	column-gap: 20px;
@@ -748,23 +738,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	color: #999999;
 }
 
-.js-description__list, .js-actors__list {
-	display: none;
-	font-size: 15px;
-	padding-top: 15px;
-}
-
-.js-description__list--on, .js-actors__list--on {
-	display: flex;
-	flex-direction: column;
-}
-
-.js-description__list--on big, .js-actors__list--on big {
-	cursor: pointer;
-	transition: all 0.5s;
-}
-
-.js-description__list--on span, .js-actors__list--on span {
+.description span {
 	font-weight: 400;
 	vertical-align: super;
 	font-size: 10px;
@@ -772,27 +746,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	color: #999999;
 }
 
-.js-description__list--on big:first-child, .js-actors__list--on big:last-child {
+.js-descr__list {
+	display: none;
+	font-size: 15px;
+	padding-top: 15px;
+	flex-direction: column;
+	transition: all 1s;
+	opacity: 0.1;
+}
+
+.js-descr__list--toggle {
+	display: flex;
+	flex-direction: column;
+	opacity: 1;
+}
+
+.js-descr__btn {
+	cursor: pointer;
+	
+}
+
+.js-descr__btn--toggle {
+	transition: all 0.1s;
 	border-bottom: 3px solid #CC0000;
 	color: black;
 }
-	
-.js-description__list--on big:hover, .js-actors__list--on big:hover {
+
+.js-descr__btn:hover {
 	color: #787878;
 }
 
-.list {
-	display: flex;
-	flex-direction: column;
-	padding-top: 15px;
-}
-
-.list > div {
+.js-descr__list > div {
 	display: flex;
 	padding: 10px 0px 10px 0px;
 }
 
-.list img {
+.js-descr__list img {
 	width: 60px;
 	border-radius: 100%;
 	margin-right: 10px;
@@ -800,11 +789,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	
 }
 
-.list img:hover {
+.js-descr__list img:hover {
 	width: 100px;
 }
 
-.list a {
+.js-descr__list a {
 	width: 50%;
 	align-items: center;
 	font-weight: 600;
@@ -814,22 +803,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 }
 
 @media (max-width: 550px) {
-	.list a {
+	.js-descr__list a {
 	align-items: flex-start;
 	flex-direction: column;
 }
+	#js-list--expand {
+	justify-content: center;
+}
 
 }
 
-.list a:hover {
+.js-descr__list a:hover {
 	text-decoration: none;
 }
 
-.list a > div:hover {
+.js-descr__list a > div:hover {
 	text-decoration: underline black;
 }
 
-.list sub {
+.js-descr__list sub {
 	font-size: 13px;
 	color: #999999;
 	display: flex;
@@ -849,15 +841,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	text-decoration: underline #0066CC;
 }
 
-.js-main__middle--black > .js-actors__list--on big, .js-main__middle--black > .js-description__list--on big, .js-main__middle--black > .js-actors__list--on div {
+.js-main__middle--black > .description big, .js-main__middle--black > .description div {
 	color: #F0FFFF;
 }
 
-.js-main__middle--black > .js-actors__list--on big:hover, .js-main__middle--black > .js-description__list--on big:hover {
+.js-main__middle--black > .description big:hover {
 	color: #A3A3A3;
 }
 
-.js-main__middle--black > .js-actors__list--on .list a > div:hover {
+.js-main__middle--black > .description .js-descr__list--toggle a > div:hover {
 	text-decoration: underline #F0FFFF;
 } 
 
@@ -869,9 +861,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	text-decoration: underline #F0FFFF;
 }
 
+.fade {
+	display: flex;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.1;
+	}
+	
+	to {
+		opacity: 1;
+		
+	}
+}
+
 /*2-3--MAIN ASIDE-2----------------------------------*/
 
-.main__aside-2 {
+.js-main__aside-2 {
 	flex-direction: column;
 	display: flex;
 	flex: 2;
@@ -881,28 +890,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	font-size: 15px;
 }
 
-.main__aside-2 ul {
+.js-main__aside-2 ul {
 	list-style-type: none;
 	padding: 0;
 }
 
-.main__aside-2 li {
+.js-main__aside-2 li {
 	padding: 2px;
 }
 
-.main__aside-2 img {
+.js-main__aside-2 img {
 	width: 14px;
 	padding-right: 5px;
 	vertical-align: middle;
 }
 
-.main__aside-2 a {
+.js-main__aside-2 a {
 	text-decoration: none;
 	color: #0066CC;
 	padding: 0px 5px 0px 0px;
 }
 
-.main__aside-2 a:hover {
+.js-main__aside-2 a:hover {
 	text-decoration: underline #0066CC;
 }
 
@@ -923,7 +932,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 }
 
 @media (max-width: 1110px) {
-	.main__aside-2 {
+	.js-main__aside-2 {
 		display: none;
 		
 }
@@ -936,9 +945,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	display: flex;
 	margin: 0 auto;
 	flex-direction: column;
-	padding: 25px;
+	padding: 25px 0px 25px 0px;
 	flex: 1;
-	
+	width: 100%;
 }
 
 .footer a {
