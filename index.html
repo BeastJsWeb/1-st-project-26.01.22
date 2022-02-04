@@ -23,15 +23,22 @@
 					<a class="js-theme" href="#"><img src="images/icon24.png">Тема</a>
 				</div>
 			</nav>
-			<div class="header__block-2"><a class="button--hover" href="#">Сериалы</a>
-				<a href="#" class="button--hover">Новости</a>
-				<a href="#" class="button--hover">Рейтинги</a>
-				<a href="#" class="button--hover">Сообщество</a>
+			<div class="header__block-2">
+				<div class="js-block-2__btns">
+					<a href="#" class="button--hover">Сериалы</a>
+					<a href="#" class="button--hover">Новости</a>
+					<a href="#" class="button--hover">Рейтинги</a>
+					<a href="#" class="button--hover">Сообщество</a>
+				</div>	
+				<div>
+					<a class="js-form__btn" href="#"><img src="images/icon4.png"></a>
+					<form class="js-form" action="#"><input id="js-focus" type="text" name="navigation" value="" placeholder="Найти сериал"></form>
+				</div>
 			</div>
-			<div class="header__block-3"><a href="#"><img src="images/icon4.png"></a>
+			<div class="header__block-3">
 				<a class="button--hover" href="#"><img class="header__block-3--img" src="images/icon3.png">Войти</a>
 			</div>
-			<div class="block-3--775px"><a href="#"><img src="images/icon4.png"></a>
+			<div class="block-3--775px">
 				<a href="#"><img class="header__block-3--img" src="images/icon3.png"></a>
 			</div>
 		</header>
@@ -113,8 +120,19 @@
 				</div>
 				
 				<div class="middle__note">
-					<a id="js-note" class="js-note"><img src="images/icon22.png">Написать заметку</a>
-					<div id="js-note__textarea" class="js-note__textarea"><textarea></textarea><div><button class="js-textarea__button">Сохранить</button><button class="js-textarea__button">Отмена</button></div></div>
+					<a class="js-note"><img src="images/icon22.png">Написать заметку</a>
+					<div class="js-note--restore">Заметка удалена.<a id="js-restore__btn">Восстановить?</a></div>
+					<div id="js-note__textarea" class="js-note__textarea">
+						<textarea id="textarea" name="text"></textarea>
+						<div>
+							<button class="js-textarea__button">Сохранить</button>
+							<button class="js-textarea__button">Отмена</button>
+						</div>
+					</div>
+					<div class="js-note__text">
+						<div id="js-note__text"></div>
+						<div><img class="js-text__btn" src="images/icon22.png"><img class="js-text__btn" src="images/icon25.png"></div>
+					</div>
 				</div>
 				
 				<div class="description">
@@ -131,7 +149,11 @@
 							<a href="#"><img src="images/pic6.jpg"><div>Willie Garson<sub>Mozzie</sub></div></a>
 						</div>
 						<div><a href="#"><img src="images/pic7.jpg"><div>Tiffani Thiessen<sub>Elizabeth Burke</sub></div></a>
+							<a class="js-list__more" href="#"><img src="images/pic8.jpg"><div>Marsha Thomason<sub>Fbi Agent Diana Barrigan</sub></div></a>
 							<a id="js-list--expand">Показать все</a>
+						</div>
+						<div class="js-list__more"><a href="#"><img src="images/pic9.jpg"><div>Hilarie Burton Morgan<sub>Sara Ellis</sub></div></a>
+							<a href="#"><img src="images/pic10.jpg"><div>Natalie Morales<sub>Fbi Agent Lauren Cruz</sub></div></a>
 						</div>
 					</div>
 				</div>	
