@@ -717,7 +717,7 @@ li .middle__kinopoisk:hover {
 /*--2-2-6--MIDDLE NOTE---------------*/
 
 .middle__note {
-	padding: 10px 0px 0px 0px;
+	padding: 15px 0px 15px 0px;
 	font-size: 14px;
 }
 
@@ -796,7 +796,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	gap: 10px;
 }
 
-.js-note__textarea--black > textarea {
+.js-note__textarea--black > textarea, .js-note__text--black {
 	background: #44474C;
 	color: #F0FFFF;
 	outline: #45484D;
@@ -811,7 +811,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 .description > div:nth-child(1) {
 	display: flex;
-	padding-top: 30px;
 	font-weight: 600;
 	font-size: 17px;
 	column-gap: 20px;

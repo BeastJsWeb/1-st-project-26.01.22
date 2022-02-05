@@ -55,8 +55,9 @@ gradeBtns.forEach((btn, i) => {
 
 // 2-2-6 MIDDLE NOTE
 
-const textareaWrapper = document.getElementById('js-note__textarea');
 const noteBtn = main.querySelector('.js-note');
+const textareaWrapper = document.getElementById('js-note__textarea');
+const noteTextWrapper = main.querySelector('.js-note__text');
 
 noteBtn.addEventListener('click', () => {
   textareaWrapper.classList.add('js-note__textarea--on');
@@ -74,68 +75,67 @@ noteBtn.addEventListener('click', () => {
     btn.addEventListener('click', e => {
       textareaWrapper.classList.remove('js-note__textarea--on');
 
-      const noteTextWrapper = main.querySelector('.js-note__text');
-// ДОБАВИТЬ EVENTTARGET 3-М УСЛОВИЕМ
-      if (textarea.value.toString() !== '' && localStorage.getItem('note')) {
+      if (btn === areaBtns[1] && textarea.value.toString() !== '' && localStorage.getItem('note') !== null) {
         noteTextWrapper.classList.add('js-note__text--load');
+      } else if (textarea.value.toString() === '' && localStorage.getItem('note') !== null) {
+          noteTextWrapper.classList.add('js-note__text--load');
       } else if (btn === areaBtns[1]) {
-        textarea.value = '';
+          textarea.value = '';
+          noteBtn.classList.remove('js-note--hide');
+        }  
+
+      if (btn === areaBtns[0] && textarea.value.toString() === '') {
+        noteTextWrapper.classList.remove('js-note__text--load');
         noteBtn.classList.remove('js-note--hide');
-        }
-        
-      if (textarea.value.toString() === '') {
-        noteBtn.classList.remove('js-note--hide');
+        localStorage.removeItem('note');
 
         // save note
 
       } else if (btn === areaBtns[0]) {
-        localStorage.setItem('note', textarea.value.toString());
+          localStorage.setItem('note', textarea.value.toString());
 
-        const noteText = document.getElementById('js-note__text');
-        const noteTextWrapper = main.querySelector('.js-note__text');
+          document.getElementById('js-note__text').textContent = localStorage.getItem('note');
+          noteTextWrapper.classList.add('js-note__text--load');
 
-        noteText.textContent = localStorage.getItem('note');
-        noteTextWrapper.classList.add('js-note__text--load');
-
-        const noteTextBtns = noteTextWrapper.querySelectorAll('.js-text__btn');
+          const noteTextBtns = noteTextWrapper.querySelectorAll('.js-text__btn');
         
         // delete note
 
-        noteTextBtns.forEach(btn => {
-          btn.addEventListener('click', e => {
-            if (btn === noteTextBtns[1]) {
-              const noteRestore = main.querySelector('.js-note--restore');
+          noteTextBtns.forEach(btn => {
+            btn.addEventListener('click', e => {
+              if (btn === noteTextBtns[1]) {
+                const noteRestore = main.querySelector('.js-note--restore');
 
-              noteRestore.classList.add('js-note--restore--on');
-              noteTextWrapper.classList.remove('js-note__text--load');
+                noteRestore.classList.add('js-note--restore--on');
+                noteTextWrapper.classList.remove('js-note__text--load');
 
-              const deleteStop = setTimeout(() => {
-                noteRestore.classList.remove('js-note--restore--on');
-                noteBtn.classList.remove('js-note--hide');
-                localStorage.removeItem('note');
-                textarea.value = '';
-              }, 5000);
+                const deleteStop = setTimeout(() => {
+                  noteRestore.classList.remove('js-note--restore--on');
+                  noteBtn.classList.remove('js-note--hide');
+                  localStorage.removeItem('note');
+                  textarea.value = '';
+                }, 5000);
 
               // stop delete note
 
-              document.getElementById('js-restore__btn').addEventListener('click', e => {
-                clearTimeout(deleteStop);
+                document.getElementById('js-restore__btn').addEventListener('click', e => {
+                  clearTimeout(deleteStop);
 
-                noteRestore.classList.remove('js-note--restore--on');
-                noteTextWrapper.classList.add('js-note__text--load');
-              });
+                  noteRestore.classList.remove('js-note--restore--on');
+                  noteTextWrapper.classList.add('js-note__text--load');
+                });
+              } 
               
-            } 
-            if (btn === noteTextBtns[0]) {
-              noteTextWrapper.classList.remove('js-note__text--load');
-              textareaWrapper.classList.add('js-note__textarea--on');
-
-              textarea.textContent = localStorage.getItem('note');
-              textarea.focus();
-            }
+              if (btn === noteTextBtns[0]) {
+                noteTextWrapper.classList.remove('js-note__text--load');
+                textareaWrapper.classList.add('js-note__textarea--on');
+                textarea.textContent = localStorage.getItem('note');
+                textarea.value = textarea.textContent;
+                textarea.focus();
+              }
+            });
           });
-        });
-      }
+        }
     });
   });
 });
@@ -186,6 +186,7 @@ theme.forEach(theme => {
     main.querySelector('.js-main__aside').classList.toggle('js-main__aside--black');
     main.querySelector('.js-main__middle').classList.toggle('js-main__middle--black');
     main.querySelector('.js-main__aside-2').classList.toggle('js-main__aside-2--black');
+    noteTextWrapper.classList.toggle('js-note__text--black');
 
     statusBtns.forEach(btn => {
       btn.classList.toggle('js-buttons--black');
