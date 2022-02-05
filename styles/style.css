@@ -357,7 +357,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 .js-main__aside a {
 	text-decoration: none;
 	opacity: 0.6;
-	/*filter: grayscale(1);*/
 	border-bottom: 1px solid #868686;
 	padding: 20px 5px 0px 5px;
 	transition: all 0.3s;
@@ -366,7 +365,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 }	
 
 .js-main__aside a:hover {
-	/*filter: grayscale(0);*/
 	opacity: 1;
 	border-bottom: 1px solid #CCCCCC;
 	padding: 25px 5px 5px 5px;
@@ -553,6 +551,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 }
 
 .middle__grade span {
+	position: absolute;
+	padding: 10px 0px 10px 0px;
 	align-self: center;
 	font-weight: 600;
 	display: flex;
@@ -600,9 +600,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	.grade__number--font {
 		padding-bottom: 30px;
 	}
-	
-	.middle__grade > div > div, .middle__grade span {
+	.middle__grade > div > div {
 		padding-top: 30px;
+	}
+	.middle__grade span {
+		padding-top: 40px;
 	}
 }
 
@@ -717,13 +719,13 @@ li .middle__kinopoisk:hover {
 /*--2-2-6--MIDDLE NOTE---------------*/
 
 .middle__note {
-	padding: 15px 0px 15px 0px;
+	padding: 15px 10px 15px 0px;
 	font-size: 14px;
 }
 
 .middle__note img {
 	width: 17px;
-	padding-right: 5px;
+	padding-right: 10px;
 	vertical-align: middle;
 }
 
@@ -735,8 +737,10 @@ li .middle__kinopoisk:hover {
 }
 
 .middle__note textarea {
+	padding: 5px;
+	resize: none;
 	width: 100%;
-	z-index: 1;
+	height: 55px;
 	outline: none;
 	border: 1px solid #CCCCCC;
 }
@@ -745,7 +749,7 @@ li .middle__kinopoisk:hover {
 	cursor: pointer;
 }
 
-.middle__note > .js-note--hide, .js-note__textarea, .js-note--restore {
+.middle__note > .js-note--hide, .js-note__textarea, .js-note--restore, .js-note__text {
 	display: none;
 } 
 
@@ -773,14 +777,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 .js-note__textarea--on {
 	display: flex;
 	flex-direction: column;
-}
-
-.js-note__text {
-	display: none;
-	justify-content: space-between;
-	background: #E1E9EC;
-	padding: 15px;
-	gap: 10px;
 }
 
 .js-note__text--load {
