@@ -14,9 +14,6 @@ body {
 
 .header {
 	border-bottom: 3px solid #CC0000;
-	/*BLACK*/
-	/*border-bottom: 3px solid #004242;*/
-	/*BLACK*/
 	display:flex;
 	justify-content: space-evenly;
 	padding: 10px;
@@ -46,7 +43,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	transition: all 1s;
 }
 
-.button--hover:hover {
+.js-block-2__btns a:hover, .header__block-3 a:hover {
 	color: #D4D4D4;
 	text-decoration: underline;
 	/*animation: lineMove 1s infinite linear;*/
@@ -74,7 +71,6 @@ nav div {
 	left: -250px;
 	position: absolute;
 	flex-direction: column;
-	/*background-color: #252425;*/
 	margin: 0 auto;
 	text-align: left;
 	width: 250px;
@@ -357,7 +353,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 .js-main__aside a {
 	text-decoration: none;
 	opacity: 0.6;
-	/*filter: grayscale(1);*/
 	border-bottom: 1px solid #868686;
 	padding: 20px 5px 0px 5px;
 	transition: all 0.3s;
@@ -366,7 +361,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 }	
 
 .js-main__aside a:hover {
-	/*filter: grayscale(0);*/
 	opacity: 1;
 	border-bottom: 1px solid #CCCCCC;
 	padding: 25px 5px 5px 5px;
@@ -433,7 +427,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 	text-decoration: underline #0066CC;
 }
 
-
 .js-main__middle--black {
 	border-right: none;
 background: rgb(69,72,77); /* Old browsers */
@@ -446,7 +439,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 .js-main__middle--black a {
 	color: #B2B2B2;
 }
-
 
 .js-main__middle--black a:hover {
 	text-decoration: underline #F0FFFF;
@@ -542,7 +534,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 .middle__grade {
 	display: flex;
-	padding: 10px 0px 10px 0px;
+	padding: 5px 0px 5px 0px;
 	align-items: center;
 	border-bottom: 1px solid #EEEEEE;
 }
@@ -558,6 +550,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 	display: flex;
 	flex-direction: column;
 	z-index:1;
+	padding: 10px 0px 10px 0px;
 }
 
 .js-grade {
@@ -598,11 +591,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 @media (max-width: 550px) {
 	.grade__number--font {
-		padding-bottom: 30px;
+		padding-bottom: 40px;
 	}
-	
-	.middle__grade > div > div, .middle__grade span {
+	.middle__grade > div > div  {
 		padding-top: 30px;
+	}
+	.middle__grade span {
+		padding-top: 40px;
 	}
 }
 
@@ -727,11 +722,14 @@ li .middle__kinopoisk:hover {
 	vertical-align: middle;
 }
 
+.js-note {
+	max-width: 145px;
+}
+
 .js-note a {
 	text-decoration: none;
 	border-bottom: 1px dotted #0066CC;
 	font-size: 14px;
-	
 }
 
 .middle__note textarea {
