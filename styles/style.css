@@ -184,6 +184,7 @@ nav a:hover {
 	flex: 1;
 	text-align: left;
 	flex-basis: 22%;
+	color: white;
 }
 
 .header__block-3--img {
@@ -198,7 +199,7 @@ nav a:hover {
 	display: flex;
 	}
 
-.header input {
+.header input:nth-child(1) {
 	display: flex;
 	width: 450px;
 	background: #44474C;
@@ -739,7 +740,7 @@ li .middle__kinopoisk:hover {
 	border: 1px solid #CCCCCC;
 }
 
-.middle__note > .js-note, .js-text__btn, #js-restore__btn {
+.middle__note > .js-note, .js-text__btn-1, .js-text__btn-2, #js-restore__btn {
 	cursor: pointer;
 }
 
