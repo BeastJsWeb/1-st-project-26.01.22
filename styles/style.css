@@ -1,3 +1,6 @@
+/* оптимизация для шпифтов кирилицы
+&subset=cyrillic-ext             */
+
 body {
 	display: flex;
 	justify-content: center;
@@ -273,7 +276,6 @@ sup {
 	.main {
 		padding-top: 50px;
 	}
-	
 	.header {
 		height: 30px;
 	}

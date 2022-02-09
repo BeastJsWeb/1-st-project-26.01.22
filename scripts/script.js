@@ -20,9 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   header.querySelector(".js-form__btn").addEventListener("click", (e) => {
     header.querySelector(".js-form").classList.toggle("js-form--on");
-    header
-      .querySelector(".js-block-2__btns")
-      .classList.toggle("js-block-2__btns--off");
+    header.querySelector(".js-block-2__btns").classList.toggle("js-block-2__btns--off");
     document.getElementById("js-focus").focus();
   });
 
@@ -59,15 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2-2-6 MIDDLE NOTE   /////////////////////////////////////////////////////////////
 
   const noteLoadedFromStorage = window.localStorage.getItem("note") !== null;
-  const noteBtnStart = main.querySelector(".js-note");
+  const noteBtnStart = document.getElementById("js-note");
   const noteTextWrapper = main.querySelector(".js-note__text");
-  const noteBtnEdit = noteTextWrapper.querySelector(".js-text__btn-1");
-  const noteBtnDelete = noteTextWrapper.querySelector(".js-text__btn-2");
+  const noteBtnEdit = document.getElementById("js-text__btn-1");
+  const noteBtnDelete = document.getElementById("js-text__btn-2");
   const textarea = document.getElementById("textarea");
-  const noteRestore = main.querySelector(".js-note--restore");
+  const noteRestore = document.getElementById("js-note--restore");
   const textareaWrapper = document.getElementById("js-note__textarea");
-  const noteBtnCancel = textareaWrapper.querySelector(".js-textarea__button-2");
-  const noteBtnSave = textareaWrapper.querySelector(".js-textarea__button-1");
+  const noteBtnCancel = document.getElementById("js-textarea__button-2");
+  const noteBtnSave = document.getElementById("js-textarea__button-1");
 
   // функционал кнопок текущей заметки, окно ввода текста и кнопки "сохранить" , "отменить"
 
@@ -77,15 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
     noteBtnCancel.addEventListener("click", (e) => {
       textareaWrapper.classList.remove("js-note__textarea--on");
 
-      if (
-        textarea.value.toString() !== "" &&
-        localStorage.getItem("note") !== null
-      ) {
+      if (textarea.value.toString() !== "" && localStorage.getItem("note") !== null) {
         noteTextWrapper.classList.add("js-note__text--load");
-      } else if (
-        textarea.value.toString() === "" &&
-        localStorage.getItem("note") !== null
-      ) {
+      } else if (textarea.value.toString() === "" && localStorage.getItem("note") !== null) {
         noteTextWrapper.classList.add("js-note__text--load");
       } else {
         textarea.value = "";
@@ -104,8 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("note");
       } else {
         localStorage.setItem("note", textarea.value.toString());
-        document.getElementById("js-note__text").textContent =
-          localStorage.getItem("note");
+        document.getElementById("js-note__text").textContent = localStorage.getItem("note");
         noteTextWrapper.classList.add("js-note__text--load");
       }
     });
@@ -128,9 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // остановить удаление - восстановить заметку
 
-      document
-        .getElementById("js-restore__btn")
-        .addEventListener("click", (e) => {
+      document.getElementById("js-restore__btn").addEventListener("click", (e) => {
           clearTimeout(deleteStop);
 
           noteRestore.classList.remove("js-note--restore--on");
@@ -153,8 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (noteLoadedFromStorage) {
     noteBtnStart.classList.add("js-note--hide");
     noteTextWrapper.classList.add("js-note__text--load");
-    document.getElementById("js-note__text").textContent =
-      localStorage.getItem("note");
+    document.getElementById("js-note__text").textContent = localStorage.getItem("note");
 
     noteDeliteEditRestore();
     noteSaveCancel();
@@ -212,15 +200,9 @@ document.addEventListener("DOMContentLoaded", () => {
     main.classList.toggle("js-main--black");
     textareaWrapper.classList.toggle("js-note__textarea--black");
     header.classList.toggle("js-header--black");
-    main
-      .querySelector(".js-main__aside")
-      .classList.toggle("js-main__aside--black");
-    main
-      .querySelector(".js-main__middle")
-      .classList.toggle("js-main__middle--black");
-    main
-      .querySelector(".js-main__aside-2")
-      .classList.toggle("js-main__aside-2--black");
+    document.getElementById("js-main__aside").classList.toggle("js-main__aside--black");
+    document.getElementById("js-main__middle").classList.toggle("js-main__middle--black");
+    document.getElementById("js-main__aside-2").classList.toggle("js-main__aside-2--black");
     noteTextWrapper.classList.toggle("js-note__text--black");
 
     statusBtns.forEach((btn) => {
