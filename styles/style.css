@@ -1,3 +1,6 @@
+/* оптимизация для шпифтов кирилицы
+&subset=cyrillic-ext             */
+
 body {
 	display: flex;
 	justify-content: center;
@@ -208,19 +211,19 @@ nav a:hover {
 }
 
 @media (max-width: 940px) {
-	.header input {
+	.header input:nth-child(1) {
 		width: 300px;
 	}
 }
 
 @media (max-width: 450px) {
-	.header input {
+	.header input:nth-child(1) {
 		width: 200px;
 	}
 }
 
 @media (max-width: 350px) {
-	.header input {
+	.header input:nth-child(1) {
 		width: 150px;
 	}
 }
@@ -273,7 +276,6 @@ sup {
 	.main {
 		padding-top: 50px;
 	}
-	
 	.header {
 		height: 30px;
 	}
